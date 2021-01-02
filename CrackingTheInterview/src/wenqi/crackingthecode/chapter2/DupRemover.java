@@ -1,5 +1,6 @@
 package wenqi.crackingthecode.chapter2;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 /**
@@ -27,12 +28,14 @@ public class DupRemover<Comparable> {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		LinkedList<Character> testList = new LinkedList<Character>();
-		testList.add('j');
-		testList.add('a');
-		testList.add('v');
-		testList.add('a');
-		testList.add('j');
+	//	LinkedList<Character> testList = new LinkedList<Character>();
+		//Character[] cArray = {'j','a','v','a','j'};
+		LinkedList<Character> testList = (LinkedList<Character>)Arrays.asList('j','a','v','a','j');
+//		testList.add('j');
+//		testList.add('a');
+//		testList.add('v');
+//		testList.add('a');
+//		testList.add('j');
 		
 		List<Character> resultList = new DupRemover<Character>().remove(testList);
 		for(Character c: resultList) {
